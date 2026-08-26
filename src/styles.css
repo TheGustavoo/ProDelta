@@ -1,0 +1,150 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * PRODELTA design system — paleta creme, pêssego e vermelho.
+ * Todos os valores de cor em oklch. Use apenas tokens semânticos.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-peach: var(--peach);
+  --color-peach-foreground: var(--peach-foreground);
+  --color-clay: var(--clay);
+  --color-ink: var(--ink);
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --cream: oklch(0.968 0.021 84.6);
+  --cream-deep: oklch(0.934 0.035 79.9);
+  --peach: oklch(0.855 0.075 55.4);
+  --peach-foreground: oklch(0.32 0.09 32);
+  --clay: oklch(0.62 0.115 42);
+  --ink: oklch(0.27 0.048 40);
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(0.988 0.012 86);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.988 0.012 86);
+  --popover-foreground: var(--ink);
+
+  --primary: oklch(0.505 0.187 28.5);
+  --primary-foreground: oklch(0.98 0.015 84);
+  --secondary: var(--peach);
+  --secondary-foreground: var(--peach-foreground);
+  --muted: var(--cream-deep);
+  --muted-foreground: oklch(0.49 0.038 45);
+  --accent: oklch(0.9 0.055 62);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0.01 84);
+  --border: oklch(0.887 0.036 72);
+  --input: oklch(0.887 0.036 72);
+  --ring: oklch(0.505 0.187 28.5);
+
+  --gradient-warm: linear-gradient(135deg, var(--cream) 0%, var(--peach) 100%);
+  --gradient-ember: linear-gradient(
+    120deg,
+    oklch(0.505 0.187 28.5) 0%,
+    oklch(0.62 0.16 38) 55%,
+    oklch(0.74 0.13 52) 100%
+  );
+  --shadow-soft: 0 18px 45px -22px oklch(0.4 0.12 35 / 0.45);
+  --shadow-lift: 0 26px 60px -26px oklch(0.4 0.14 32 / 0.55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility surface-warm {
+  background-image: var(--gradient-warm);
+}
+
+@utility surface-ember {
+  background-image: var(--gradient-ember);
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: radial-gradient(
+      oklch(0.62 0.115 42 / 0.14) 1px,
+      transparent 1px
+    );
+    background-size: 18px 18px;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}

@@ -26,7 +26,7 @@ export const eventInfo: EventInfo = {
   subtitle: "Workshop de Produção e Nutrição Animal do Delta do Parnaíba",
   tagline:
     "Tecnologias Sustentáveis no Delta: Inovação e Biotecnologia Aplicadas à Produção Animal.",
-  dates: "25, 26 e 27 de novembro de 2026",
+  dates: "17, 18 e 19 de novembro de 2026",
   datesISO: { start: "2026-11-25", end: "2026-11-27" },
   venue: "UNINASSAU",
   city: "Parnaíba – PI",
@@ -76,8 +76,9 @@ export const schedule: readonly ScheduleDay[] = [
   {
     id: "dia-1",
     label: "Dia 1",
-    date: "25 de novembro de 2026",
+    date: "17 de novembro de 2026",
     items: [
+      { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
       { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
       { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
     ],
@@ -85,8 +86,9 @@ export const schedule: readonly ScheduleDay[] = [
   {
     id: "dia-2",
     label: "Dia 2",
-    date: "26 de novembro de 2026",
+    date: "18 de novembro de 2026",
     items: [
+      { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
       { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
       { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
     ],
@@ -94,8 +96,9 @@ export const schedule: readonly ScheduleDay[] = [
   {
     id: "dia-3",
     label: "Dia 3",
-    date: "27 de novembro de 2026",
+    date: "19 de novembro de 2026",
     items: [
+      { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
       { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
       { time: PLACEHOLDER, title: "Atividade a definir", detail: "Conteúdo em breve" },
     ],

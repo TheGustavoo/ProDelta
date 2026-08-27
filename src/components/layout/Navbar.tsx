@@ -29,7 +29,8 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/85 shadow-soft backdrop-blur-md" : "bg-transparent",
+        // Fundo Verde Floresta translúcido quando rolar a página
+        scrolled ? "bg-[#1E3F33]/95 shadow-md backdrop-blur-md" : "bg-transparent",
       )}
     >
       <nav className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:px-8">
@@ -41,7 +42,10 @@ export function Navbar() {
             width={44}
             height={44}
           />
-          <span className="truncate font-display text-lg font-semibold">PRODELTA</span>
+          {/* Texto do logotipo em Off-White */}
+          <span className="truncate font-display text-lg font-semibold text-[#F4F1EB]">
+            PRODELTA
+          </span>
         </a>
 
         <div className="hidden items-center gap-7 lg:flex">
@@ -49,20 +53,23 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              // Links em Off-White, ficando Terracota ao passar o mouse
+              className="text-sm font-medium text-[#F4F1EB]/80 transition-colors hover:text-[#D95D39]"
             >
               {link.label}
             </a>
           ))}
+          {/* Componente base aplicado na versão Desktop */}
           <CtaButton label="Inscreva-se" />
         </div>
 
+        {/* Botão Menu Hambúrguer (Mobile) */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
-          className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-card text-foreground lg:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-full border border-[#F4F1EB]/20 bg-transparent text-[#F4F1EB] transition-colors hover:bg-[#F4F1EB]/10 lg:hidden"
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
@@ -74,7 +81,8 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-border bg-background/95 backdrop-blur lg:hidden"
+            // Fundo do menu Mobile em Verde Floresta
+            className="overflow-hidden border-t border-[#F4F1EB]/10 bg-[#1E3F33]/98 backdrop-blur lg:hidden"
           >
             <div className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4">
               {links.map((link) => (
@@ -82,12 +90,13 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-[#F4F1EB] transition-colors hover:bg-[#F4F1EB]/10 hover:text-[#D95D39]"
                 >
                   {link.label}
                 </a>
               ))}
-              <CtaButton className="mt-3 justify-center" label="Inscreva-se" />
+              {/* Componente base aplicado na versão Mobile (Largura total) */}
+              <CtaButton className="mt-3 w-full justify-center" label="Inscreva-se" />
             </div>
           </motion.div>
         ) : null}

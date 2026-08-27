@@ -16,7 +16,7 @@ export function About() {
           <img
             src={logo}
             alt="Selo do 1º PRODELTA"
-            className="w-56 sm:w-72"
+            className="w-100 sm:w-900"
             width={288}
             height={295}
             loading="lazy"

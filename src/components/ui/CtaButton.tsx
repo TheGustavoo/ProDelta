@@ -20,7 +20,8 @@ export function CtaButton({ label = "Fazer inscrição", className, size = "md" 
       whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 320, damping: 20 }}
       className={cn(
-        "group inline-flex items-center gap-2 rounded-full surface-ember font-semibold text-primary-foreground shadow-soft ring-1 ring-primary/25 transition-shadow hover:shadow-lift focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        // Substituímos as cores do tema antigo pelo Terracota e Branco
+        "group inline-flex items-center gap-2 rounded-full bg-[#D95D39] font-semibold text-white shadow-soft transition-all hover:bg-[#c25130] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D95D39] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         size === "lg" ? "px-8 py-4 text-base" : "px-6 py-3 text-sm",
         className,
       )}

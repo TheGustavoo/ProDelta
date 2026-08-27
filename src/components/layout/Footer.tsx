@@ -9,8 +9,11 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-muted px-5 py-14 sm:px-8">
+    // Fundo Verde Floresta sólido aplicado aqui
+    <footer className="bg-[#1E3F33] px-5 py-14 sm:px-8">
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
+        
+        {/* Coluna 1: Identidade */}
         <div>
           <div className="flex min-w-0 items-center gap-3">
             <img
@@ -19,19 +22,26 @@ export function Footer() {
               className="size-12 shrink-0 object-contain"
               loading="lazy"
             />
-            <span className="truncate font-display text-lg font-semibold">{eventInfo.name}</span>
+            {/* Texto em Off-White */}
+            <span className="truncate font-display text-lg font-semibold text-[#F4F1EB]">
+              {eventInfo.name}
+            </span>
           </div>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#F4F1EB]/80">
             {eventInfo.subtitle}
           </p>
         </div>
 
+        {/* Coluna 2: Informações do Evento */}
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-clay">Evento</h2>
-          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+          {/* Títulos em Terracota para destaque */}
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-[#D95D39]">
+            Evento
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm text-[#F4F1EB]/80">
             <li>{eventInfo.dates}</li>
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+              <MapPin className="mt-0.5 size-4 shrink-0 text-[#D95D39]" aria-hidden="true" />
               {eventInfo.venue} — {eventInfo.city}
             </li>
             <li>
@@ -39,7 +49,8 @@ export function Footer() {
                 href={REGISTRATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-primary underline-offset-4 hover:underline"
+                // Link em Terracota, mudando para branco no hover
+                className="font-semibold text-[#D95D39] underline-offset-4 hover:text-white hover:underline transition-colors"
               >
                 Formulário de inscrição
               </a>
@@ -47,8 +58,9 @@ export function Footer() {
           </ul>
         </div>
 
+        {/* Coluna 3: Redes Sociais */}
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-clay">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-[#D95D39]">
             Redes sociais
           </h2>
           <ul className="mt-4 flex gap-3">
@@ -57,20 +69,21 @@ export function Footer() {
                 <a
                   href={social.href}
                   aria-label={social.label}
-                  className="grid size-11 place-items-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  // Fundo translúcido, ficando Terracota no hover
+                  className="grid size-11 place-items-center rounded-full bg-[#F4F1EB]/10 text-[#F4F1EB] transition-colors hover:bg-[#D95D39] hover:text-white"
                 >
                   <social.icon className="size-5" aria-hidden="true" />
                 </a>
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-xs text-muted-foreground">
+          <p className="mt-4 text-xs text-[#F4F1EB]/60">
             Perfis oficiais a serem divulgados pela organização.
           </p>
         </div>
       </div>
 
-      <p className="mx-auto mt-12 max-w-6xl border-t border-border pt-6 text-xs text-muted-foreground">
+      <p className="mx-auto mt-12 max-w-6xl border-t border-[#F4F1EB]/10 pt-6 text-xs text-[#F4F1EB]/60 text-center md:text-left">
         © {new Date().getFullYear()} {eventInfo.name}. Todos os direitos reservados.
       </p>
     </footer>

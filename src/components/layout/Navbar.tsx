@@ -7,10 +7,8 @@ import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#objetivos", label: "Objetivos" },
   { href: "#programacao", label: "Programação" },
   { href: "#palestrantes", label: "Palestrantes" },
-  { href: "#areas", label: "Áreas" },
   { href: "#organizacao", label: "Organização" },
 ] as const;
 

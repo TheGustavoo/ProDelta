@@ -1,4 +1,4 @@
-import { CalendarDays, MapPin, Sparkles } from "lucide-react";
+import { CalendarDays, MapPin, Sparkles, ArrowRight, Info } from "lucide-react";
 import { motion } from "motion/react";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { eventInfo } from "@/data/event";
@@ -60,18 +60,20 @@ export function Hero() {
             className="mt-8 flex flex-wrap gap-3"
           >
             {/* Cards de data e local: Fundo claro com texto escuro e ícones Terracota */}
-            <div className="flex items-center gap-2 rounded-full bg-[#F4F1EB] px-4 py-2 text-sm font-medium text-[#1E3F33] shadow-soft">
-              <CalendarDays className="size-4 shrink-0 text-[#D95D39]" aria-hidden="true" />
+            <dl className="mt-6 flex flex-wrap gap-6 text-sm font-medium text-[#F4F1EB]/80">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="size-5 shrink-0 text-[#D95D39]" aria-hidden="true" />
               <dt className="sr-only">Data</dt>
               <dd>{eventInfo.dates}</dd>
             </div>
-            <div className="flex items-center gap-2 rounded-full bg-[#F4F1EB] px-4 py-2 text-sm font-medium text-[#1E3F33] shadow-soft">
-              <MapPin className="size-4 shrink-0 text-[#D95D39]" aria-hidden="true" />
+            <div className="flex items-center gap-2">
+              <MapPin className="size-5 shrink-0 text-[#D95D39]" aria-hidden="true" />
               <dt className="sr-only">Local</dt>
               <dd>
                 {eventInfo.venue} — {eventInfo.city}
               </dd>
             </div>
+          </dl>
           </motion.dl>
 
           <motion.div
@@ -81,17 +83,21 @@ export function Hero() {
             animate="show"
             className="mt-9 flex flex-wrap items-center gap-4"
           >
-            {/* Substituí temporariamente o <CtaButton /> por uma tag <button> 
-                para garantir que o estilo Terracota seja aplicado imediatamente aqui */}
-            <button className="inline-flex h-12 items-center justify-center rounded-full bg-[#D95D39] px-8 text-sm font-semibold text-white transition-colors hover:bg-[#c25130] hover:shadow-lg">
-              Garantir minha inscrição
-            </button>
+            {/* 1. Botão Principal (Sólido com seta na direita) */}
+            {/* 1. Botão Principal (Transformado em link âncora) */}
+            <a 
+            href="#inscricao" 
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#D95D39] px-8 text-sm font-semibold text-white transition-all hover:bg-[#c25130] hover:shadow-lg">
+            Quero participar
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1"     aria-hidden="true" /></a>
+            
+            {/* 2. Botão Secundário (Outline com ícone na esquerda) */}
             <a
-              href="#sobre"
-              // Link "Saiba mais" ajustado para Off-white, mudando para Terracota no hover
-              className="text-sm font-semibold text-[#F4F1EB] underline-offset-4 transition-colors hover:text-[#D95D39] hover:underline"
+              href="#programacao"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-[#F4F1EB]/80 bg-transparent px-8 text-sm font-semibold text-[#F4F1EB] transition-colors hover:bg-[#F4F1EB]/10 hover:border-[#F4F1EB]"
             >
-              Saiba mais
+              <Info className="size-4" aria-hidden="true" />
+              Ver programação
             </a>
           </motion.div>
         </div>

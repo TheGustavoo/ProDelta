@@ -1,6 +1,6 @@
 import { Instagram, Mail, MapPin } from "lucide-react";
 import { eventInfo, REGISTRATION_URL } from "@/data/event";
-import logo from "@/assets/logo-prodelta.png.asset.json";
+import logo from "@/assets/logo.png";
 
 const socials = [
   { label: "Instagram", href: "#", icon: Instagram },
@@ -14,7 +14,7 @@ export function Footer() {
         <div>
           <div className="flex min-w-0 items-center gap-3">
             <img
-              src={logo.url}
+              src={logo}
               alt="Logotipo do 1º PRODELTA"
               className="size-12 shrink-0 object-contain"
               loading="lazy"

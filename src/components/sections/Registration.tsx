@@ -18,7 +18,7 @@ export function Registration() {
             Garanta sua vaga no 1º PRODELTA
           </h2>
           <p className="mt-4 max-w-xl text-base opacity-90">
-            As inscrições são feitas pelo formulário oficial do evento. O link abre em uma nova aba.
+            As inscrições são feitas pelo formulário oficial do evento.
           </p>
           <dl className="mt-6 flex flex-wrap gap-4 text-sm font-medium">
             <div className="flex items-center gap-2">

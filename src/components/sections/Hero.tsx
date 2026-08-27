@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { eventInfo } from "@/data/event";
 import logo from "@/assets/logo.png";
-import heroImage from "@/assets/hero-rebanho.png.asset.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -103,17 +102,6 @@ export function Hero() {
             fetchPriority="high"
           />
         </motion.div>
-      </div>
-
-      <div className="relative h-52 w-full overflow-hidden sm:h-72 lg:h-96">
-        <img
-          src={heroImage.url}
-          alt="Rebanho de ovinos pastando em área experimental de produção animal"
-          className="size-full object-cover"
-          width={1024}
-          height={559}
-          loading="lazy"
-        />
       </div>
     </section>
   );

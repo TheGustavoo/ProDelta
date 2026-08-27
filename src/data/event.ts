@@ -7,7 +7,7 @@ export const PLACEHOLDER = "A definir" as const;
 
 /** Link externo do Google Forms de inscrição (substituir quando fornecido). */
 export const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSf-PRODELTA-PLACEHOLDER/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLSeLQw2-ptJeZSfRCzSC9tttonPlmTMs4_-Zh0eyeBHtNBhAyw/viewform";
 
 export interface EventInfo {
   readonly name: string;

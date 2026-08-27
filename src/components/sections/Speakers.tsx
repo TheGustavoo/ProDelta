@@ -24,7 +24,7 @@ export function Speakers() {
             <h3 className="mt-6 text-lg font-semibold">{speaker.name}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{speaker.bio}</p>
             <span className="mt-5 rounded-full bg-secondary px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-secondary-foreground">
-              A confirmar
+              Confirmado
             </span>
           </li>
         ))}

@@ -2,7 +2,7 @@ import { CalendarDays, MapPin, Sparkles, ArrowRight, Info } from "lucide-react";
 import { motion } from "motion/react";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { eventInfo } from "@/data/event";
-import logo from "@/assets/logo.png";
+import vaca from "@/assets/vaca.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -108,7 +108,15 @@ export function Hero() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="justify-self-center"
         >
-          #COLOCAR FOTO DA TURMA
+          <img
+            src={vaca}
+            alt="Selo do 1º PRODELTA"
+            className="w-100 sm:w-900"
+            width={288}
+            height={295}
+            loading="lazy"
+          />
+
         </motion.div>
       </div>
     </section>

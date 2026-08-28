@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/ui/CtaButton";
-import logo from "@/assets/logo.png";
+import name from "@/assets/name.png";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -34,15 +34,16 @@ export function Navbar() {
       <nav className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:px-8">
         <a href="#topo" className="flex min-w-0 items-center gap-3">
           <img
-            src={logo}
+            src={name}
             alt="Logotipo do 1º PRODELTA"
-            className="size-11 shrink-0 object-contain"
-            width={44}
-            height={44}
+            // Mudamos de size-11 para w-[130px] h-auto (você pode aumentar ou diminuir esse valor de 130px se quiser)
+            className="w-[130px] h-auto shrink-0 object-contain sm:w-[150px]"
+            width={150}
+            height={50}
           />
           {/* Texto do logotipo em Off-White */}
           <span className="truncate font-display text-lg font-semibold text-[#F4F1EB]">
-            PRODELTA
+            
           </span>
         </a>
 

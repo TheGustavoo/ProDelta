@@ -6,10 +6,10 @@ export function Topics() {
   return (
     <Section
       id="areas"
-      eyebrow="Áreas temáticas"
+      eyebrow="// Áreas temáticas"
       title="Os eixos do conhecimento"
       description="Oito frentes que conectam pesquisa, biotecnologia e produção no campo."
-      tone="peach"
+      tone="cream"
     >
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {topics.map((topic) => (

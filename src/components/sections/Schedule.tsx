@@ -15,7 +15,7 @@ export function Schedule() {
   return (
     <Section
       id="programacao"
-      eyebrow="Programação"
+      eyebrow="// Programação"
       title="Três dias, uma agenda completa"
       description="A grade oficial será divulgada em breve. Os horários abaixo são reservados para preenchimento posterior."
       tone="cream"

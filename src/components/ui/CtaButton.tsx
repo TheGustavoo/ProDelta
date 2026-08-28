@@ -21,7 +21,7 @@ export function CtaButton({ label = "Fazer inscrição", className, size = "md" 
       transition={{ type: "spring", stiffness: 320, damping: 20 }}
       className={cn(
         // Substituímos as cores do tema antigo pelo Terracota e Branco
-        "group inline-flex items-center gap-2 rounded-full bg-[#D95D39] font-semibold text-white shadow-soft transition-all hover:bg-[#c25130] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D95D39] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "group inline-flex items-center gap-2 rounded-full bg-[#DE8728] font-semibold text-white shadow-soft transition-all hover:bg-[#C47522] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DE8728] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         size === "lg" ? "px-8 py-4 text-base" : "px-6 py-3 text-sm",
         className,
       )}

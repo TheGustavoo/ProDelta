@@ -6,27 +6,29 @@ export function Objectives() {
   return (
     <Section
       id="objetivos"
-      eyebrow="Objetivos"
-      title="Por que o PRODELTA existe"
-      description="Seis compromissos que orientam toda a programação do workshop."
-      // Fundo Areia/Off-White e textos principais em Verde Floresta
-      className="bg-[#F4F1EB] text-[#1E3F33]"
+      eyebrow="// CONTEÚDO"
+      title="Uma programação diversificada"
+      description="A submissão de palestras é aberta à comunidade. Veja as áreas que vão estar no palco:"
+      // Fundo Areia Quente. Mudei o texto da seção para Verde Floresta para dar contraste!
+      className="bg-[#D4E5E2] text-[#1E3F33]"
     >
-      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {objectives.map((objective) => (
           <li
             key={objective.title}
             data-reveal
-            // Fundo branco, borda ultra sutil Verde Floresta. No hover, a borda fica Terracota.
-            className="reveal group rounded-3xl border border-[#1E3F33]/10 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-[#D95D39]/50"
+            // Card: Fundo branco com borda bem clarinha. 
+            // Hover: Borda fica Terracota e a sombra aumenta junto com o salto.
+            className="reveal group flex items-center gap-5 rounded-2xl border border-[#1E3F33]/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#DE8728]/60 hover:shadow-xl"
           >
-            {/* Ícone: Fundo translúcido Terracota. No hover, vira sólido e o ícone fica branco */}
-            <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#D95D39]/15 text-[#D95D39] transition-colors border border-transparent group-hover:bg-[#D95D39] group-hover:text-white">
+            {/* Ícone: Começa em Verde Floresta com borda fina. 
+                Hover: Borda, Fundo e Ícone mudam para Terracota. */}
+            <span className="flex size-14 shrink-0 items-center justify-center rounded-xl border border-[#1E3F33]/20 bg-transparent text-[#1E3F33] transition-colors group-hover:border-[#DE8728] group-hover:bg-[#DE8728]/10 group-hover:text-[#DE8728]">
               <Icon name={objective.icon} className="size-6" />
             </span>
             
-            {/* Título do objetivo em Verde Floresta para manter a seriedade */}
-            <h3 className="mt-5 text-lg font-semibold leading-snug text-[#1E3F33]">
+            {/* Título do Cartão: Fica em Verde Floresta para manter a leitura firme */}
+            <h3 className="text-base font-semibold leading-snug text-[#1E3F33]">
               {objective.title}
             </h3>
           </li>

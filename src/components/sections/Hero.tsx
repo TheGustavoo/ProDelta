@@ -24,7 +24,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             // Badge superior com fundo sutil e texto em Terracota
-            className="inline-flex items-center gap-2 rounded-full border border-[#D95D39]/30 bg-[#D95D39]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#D95D39]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#DE8728]/30 bg-[#DE8728]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#DE8728]"
           >
             <Sparkles className="size-3.5" aria-hidden="true" />
             {eventInfo.name}
@@ -62,12 +62,12 @@ export function Hero() {
             {/* Cards de data e local: Fundo claro com texto escuro e ícones Terracota */}
             <dl className="mt-6 flex flex-wrap gap-6 text-sm font-medium text-[#F4F1EB]/80">
             <div className="flex items-center gap-2">
-              <CalendarDays className="size-5 shrink-0 text-[#D95D39]" aria-hidden="true" />
+              <CalendarDays className="size-5 shrink-0 text-[#DE8728]" aria-hidden="true" />
               <dt className="sr-only">Data</dt>
               <dd>{eventInfo.dates}</dd>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="size-5 shrink-0 text-[#D95D39]" aria-hidden="true" />
+              <MapPin className="size-5 shrink-0 text-[#DE8728]" aria-hidden="true" />
               <dt className="sr-only">Local</dt>
               <dd>
                 {eventInfo.venue} — {eventInfo.city}
@@ -87,7 +87,7 @@ export function Hero() {
             {/* 1. Botão Principal (Transformado em link âncora) */}
             <a 
             href="#inscricao" 
-            className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#D95D39] px-8 text-sm font-semibold text-white transition-all hover:bg-[#c25130] hover:shadow-lg">
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#DE8728] px-8 text-sm font-semibold text-white transition-all hover:bg-[#C47522] hover:shadow-lg">
             Quero participar
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1"     aria-hidden="true" /></a>
             

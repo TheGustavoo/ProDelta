@@ -6,7 +6,7 @@ export function About() {
   return (
     <Section
       id="sobre"
-      eyebrow="Sobre o evento"
+      eyebrow="// Sobre o evento"
       title="O que é o PRODELTA?"
       description={aboutText}
       tone="cream"

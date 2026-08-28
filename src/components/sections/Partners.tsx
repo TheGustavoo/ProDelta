@@ -16,10 +16,10 @@ export function Partners() {
   return (
     <Section
       id="parceiros"
-      eyebrow="Instituições parceiras"
+      eyebrow="// Instituições parceiras"
       title="Feito em rede"
       description="Universidades e grupos de pesquisa que apoiam a realização do 1º PRODELTA."
-      tone="muted"
+      tone="cream"
     >
       <ul className="grid grid-cols-2 gap-6 sm:grid-cols-4">
         {partners.map((partner) => (

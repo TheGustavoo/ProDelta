@@ -52,7 +52,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               // Links em Off-White, ficando Terracota ao passar o mouse
-              className="text-sm font-medium text-[#F4F1EB]/80 transition-colors hover:text-[#D95D39]"
+              className="text-sm font-medium text-[#F4F1EB]/80 transition-colors hover:text-[#DE8728]"
             >
               {link.label}
             </a>
@@ -88,7 +88,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-[#F4F1EB] transition-colors hover:bg-[#F4F1EB]/10 hover:text-[#D95D39]"
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-[#F4F1EB] transition-colors hover:bg-[#F4F1EB]/10 hover:text-[#DE8728]"
                 >
                   {link.label}
                 </a>
